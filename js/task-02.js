@@ -7,10 +7,14 @@ const ingredients = [
   'Condiments',
 ];
 const ul = document.getElementById('ingredients');
-const liItems = ingredients.map(ingredient => {
-  const li = document.createElement('li');
-  li.textContent = ingredient;
-  li.classList.add('item');
-  return li;
-})
-ul.append(...liItems);
+function createLiItems(arr) {
+  const liItems = arr.map(ingredient => {
+    const li = document.createElement('li');
+    li.textContent = ingredient;
+    li.classList.add('item');
+    return li;
+  })
+  ul.append(...liItems);
+}
+
+createLiItems(ingredients)
