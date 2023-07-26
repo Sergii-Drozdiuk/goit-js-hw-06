@@ -16,15 +16,19 @@ const images = [
 const list = document.querySelector('.gallery');
 
 function createMarkup(arr) {
-    const markup = arr.map(({ url, alt }) => `<li>
+  const markup = arr.map(({ url, alt }) => `<li>
         <img src="${url}" alt="${alt}" width="500" height="300"/>
-  </li>`).join('')
+        </li>`).join('');
 
-    list.insertAdjacentHTML('beforeend', markup)
-    list.style.listStyle = 'none';
-    list.style.display = 'flex';
-    list.style.flexWrap = 'wrap';
-    list.style.gap = '10px';
+  list.insertAdjacentHTML('beforeend', markup);
 }
 
-createMarkup(images)
+function applyStyles(element) {
+  element.style.listStyle = 'none';
+  element.style.display = 'flex';
+  element.style.flexWrap = 'wrap';
+  element.style.gap = '10px';
+}
+
+createMarkup(images);
+applyStyles(list);
