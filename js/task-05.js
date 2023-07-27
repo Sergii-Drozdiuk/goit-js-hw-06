@@ -1,12 +1,12 @@
-let nameInput = document.querySelector('#name-input');
-let nameOutput = document.querySelector('#name-output');
-nameInput.addEventListener('input', handlerSearch);
+let input = document.querySelector('#name-input');
+let span = document.querySelector('#name-output');
+input.addEventListener('input', handlerSearch);
 
 function handlerSearch(evt) {
    if (evt.currentTarget.value.length > 0) {
-      nameOutput.textContent = evt.currentTarget.value;
-      return nameOutput.textContent;
+      span.textContent = evt.currentTarget.value;
+      return span.textContent;
    }
-   nameOutput.textContent = "Anonymous";
+   span.textContent = "Anonymous";
 }
 
