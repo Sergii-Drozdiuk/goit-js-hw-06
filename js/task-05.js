@@ -4,7 +4,7 @@ input.addEventListener('input', handlerSearch);
 
 function handlerSearch(evt) {
    if (evt.currentTarget.value.length > 0) {
-      span.textContent = evt.currentTarget.value;
+      span.textContent = evt.currentTarget.value.trim();
       return span.textContent;
    }
    span.textContent = "Anonymous";
