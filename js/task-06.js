@@ -1,5 +1,7 @@
 const validationInput = document.querySelector('#validation-input');
 
+validationInput.addEventListener('blur', handlerCheckLength);
+
 function handlerCheckLength() {
 
    const dataLength = Number(validationInput.dataset.length);
@@ -8,5 +10,3 @@ function handlerCheckLength() {
     validationInput.classList.toggle('valid', actualLength === dataLength);
     validationInput.classList.toggle('invalid', actualLength !== dataLength);
 }
-
-validationInput.addEventListener('blur', handlerCheckLength);

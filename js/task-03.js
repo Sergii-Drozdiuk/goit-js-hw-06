@@ -23,12 +23,9 @@ function createMarkup(arr) {
   list.insertAdjacentHTML('beforeend', markup);
 }
 
-function applyStyles(element) {
-  element.style.listStyle = 'none';
-  element.style.display = 'flex';
-  element.style.flexWrap = 'wrap';
-  element.style.gap = '10px';
-}
-
 createMarkup(images);
-applyStyles(list);
+
+list.style.listStyle = 'none';
+list.style.display = 'flex';
+list.style.flexWrap = 'wrap';
+list.style.gap = '10px';
